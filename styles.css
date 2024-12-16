@@ -1,0 +1,551 @@
+:root {
+  --primary-color: #ffa500;
+  --secondary-color: #ffd700;
+  --accent-color: #87ceeb;
+  --dark-color: #333;
+  --light-color: #fff;
+  --border-radius: 15px;
+  --box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(rgba(255, 165, 0, 0.8), rgba(135, 206, 235, 0.8)),
+    url("cleaning-hero.jpg");
+  background-size: cover;
+  background-position: center;
+  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  color: var(--light-color);
+  padding: 150px 0;
+  text-align: center;
+}
+
+.logo {
+  height: 60px;
+}
+
+.navbar {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 20px 0;
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .nav-link {
+  color: var(--dark-color) !important;
+  font-weight: 500;
+  padding: 8px 16px !important;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+  background-color: rgba(255, 165, 0, 0.1);
+  color: var(--primary-color) !important;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+/* Services Section */
+.services {
+  padding: 80px 0;
+  background-color: #f9f9f9;
+}
+
+.service-card {
+  text-align: center;
+  padding: 30px;
+  margin: 15px 0;
+  background: linear-gradient(145deg, var(--light-color), #f8f9fa);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  border: 1px solid rgba(255, 215, 0, 0.1);
+  padding: 35px 25px;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  border-color: var(--secondary-color);
+}
+
+.service-card i {
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Contact Section */
+.contact {
+  padding: 80px 0;
+}
+
+.form-control {
+  margin-bottom: 20px;
+  padding: 12px;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 5px 15px rgba(135, 206, 235, 0.2);
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(145deg, var(--dark-color), #222);
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+  box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.1);
+  color: var(--light-color);
+  padding: 70px 0 40px;
+}
+
+footer h4 {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+footer h4:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+  border-radius: 2px;
+}
+
+footer p {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+}
+
+.footer-contact-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.footer-contact-info i {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  font-size: 0.9rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social-links a {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  background: var(--primary-color);
+  color: var(--light-color);
+  transform: translateY(-3px);
+}
+
+/* Footer Mobile Responsiveness */
+@media (max-width: 768px) {
+  footer {
+    padding: 50px 0 30px;
+    text-align: center;
+  }
+
+  footer h4 {
+    margin-top: 30px;
+  }
+
+  footer h4:after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .footer-contact-info {
+    justify-content: center;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+
+  footer .col-md-4:first-child h4 {
+    margin-top: 0;
+  }
+}
+
+/* Buttons */
+.btn-primary {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  border: none;
+  border-radius: 25px;
+  padding: 12px 35px;
+  box-shadow: 0 4px 15px rgba(255, 165, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 165, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content p {
+    font-size: 1.2rem;
+  }
+}
+
+/* Benefits Section */
+.benefits {
+  padding: 80px 0;
+  background-color: var(--light-color);
+}
+
+.benefit-card {
+  text-align: center;
+  padding: 30px;
+  margin: 15px 0;
+  background: var(--light-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  border: 1px solid rgba(135, 206, 235, 0.2);
+  transition: all 0.3s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent-color);
+}
+
+.benefit-card i {
+  font-size: 2.5rem;
+  color: var(--accent-color);
+  margin-bottom: 20px;
+}
+
+.benefit-card h3 {
+  color: var(--dark-color);
+  margin-bottom: 15px;
+}
+
+/* Contact Links */
+.contact-link {
+  color: var(--light-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+  color: var(--primary-color);
+}
+
+.contact-link i {
+  margin-right: 8px;
+}
+
+/* Hero Buttons */
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.hero-buttons .btn-outline-light {
+  border-radius: 25px;
+  border: 2px solid var(--light-color);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.hero-buttons .btn-outline-light:hover {
+  background-color: var(--light-color);
+  color: var(--primary-color);
+}
+
+.hero-buttons .btn i {
+  margin-right: 8px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* WhatsApp Button */
+.btn-primary .fa-whatsapp {
+  margin-right: 8px;
+  font-size: 1.2em;
+}
+
+.contact .btn-primary {
+  background: linear-gradient(135deg, #25d366, #128c7e);
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.2);
+  border-color: #25d366;
+}
+
+.contact .btn-primary:hover {
+  background-color: #128c7e;
+  border-color: #128c7e;
+}
+
+/* Emoji Styling */
+h1 em,
+h2 em,
+h3 em,
+h4 em {
+  font-style: normal;
+  margin-right: 8px;
+}
+
+.service-card h3,
+.benefit-card h3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* Section Headers */
+section h2 {
+  position: relative;
+  margin-bottom: 50px;
+  padding-bottom: 15px;
+}
+
+section h2:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+  border-radius: 2px;
+}
+
+/* Footer Credit Section */
+.footer-credit {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.footer-divider {
+  margin: 30px auto;
+  width: 80%;
+  opacity: 0.1;
+}
+
+.footer-credit p {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.credit-link {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  padding: 5px 10px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.credit-link:hover {
+  color: var(--light-color);
+  background: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+.credit-link i {
+  margin-right: 5px;
+}
+
+/* Mobile Responsiveness for Credit */
+@media (max-width: 768px) {
+  .footer-credit {
+    margin-top: 30px;
+  }
+
+  .footer-credit p {
+    font-size: 0.85rem;
+  }
+}
+
+/* Logo Styling */
+.logo-emoji {
+  font-size: 2.5rem;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+/* Service Features List */
+.service-features {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.service-features li {
+  margin-bottom: 10px;
+  color: var(--dark-color);
+  opacity: 0.9;
+}
+
+.service-features i {
+  color: var(--primary-color);
+  margin-right: 10px;
+  font-size: 0.9rem;
+}
+
+/* Process Section */
+.process {
+  background: linear-gradient(135deg, #f8f9fa, #fff);
+  padding: 80px 0;
+}
+
+.process-step {
+  text-align: center;
+  padding: 30px;
+  position: relative;
+}
+
+.step-number {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-weight: bold;
+  box-shadow: 0 4px 15px rgba(255, 165, 0, 0.2);
+}
+
+.process-step h3 {
+  color: var(--dark-color);
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.process-step p {
+  color: var(--dark-color);
+  opacity: 0.8;
+  font-size: 0.95rem;
+}
+
+/* Process Steps Connection */
+.process-step:not(:last-child):after {
+  content: "";
+  position: absolute;
+  top: 50px;
+  right: -30px;
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  opacity: 0.3;
+}
+
+/* Mobile Responsiveness for Process */
+@media (max-width: 768px) {
+  .process-step {
+    margin-bottom: 30px;
+  }
+
+  .process-step:not(:last-child):after {
+    display: none;
+  }
+
+  .logo-text {
+    font-size: 1.2rem;
+  }
+
+  .logo-emoji {
+    font-size: 2rem;
+  }
+}
